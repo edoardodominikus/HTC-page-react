@@ -1,0 +1,17 @@
+.slick-slide{
+    img{
+        width: 100%;
+        min-height: 683px;
+        margin: 0 auto;
+        padding: 0;
+        object-fit: cover;
+    }
+}
+
+
+.slick-dots{
+    bottom:18px;
+    li button:before{
+        color:white;
+    }
+}

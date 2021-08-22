@@ -1,0 +1,51 @@
+footer{
+    background-color: #f4f4f4;
+    color: #4a4a4a;
+    padding: 50px 0;
+    position: relative;
+    .grid{
+        
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+        
+        .item-box{
+            display: flex;
+            
+            flex-flow: column wrap;
+            text-align: left;
+            .globe{
+                margin: auto 0;
+            } 
+            label{
+                color: #4a4a4a;
+                float:left;
+                margin-bottom: 5px;
+                }
+            ul{
+                
+                li{
+                    list-style: none;
+                    margin: 10px 0;
+                    a{
+                        white-space: nowrap;
+                        color:#9b9b9b;
+                    }
+                } 
+            }
+            
+        }
+    }
+    .copyright-block{
+        position: absolute;
+        bottom: 30px;
+        right: 100px;
+        display: flex;
+        flex-direction: row;
+        p,a{
+            padding: 0 10px;
+        }
+        p{
+            color:#9b9b9b;
+        }
+    }
+}
