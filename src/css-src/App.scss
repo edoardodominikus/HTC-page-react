@@ -1,0 +1,213 @@
+nav{
+  color:white;
+  width: 100%;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  :not(a,li,ul,img,i, .container) 
+  {
+    background-color: rgba(0,0,0,.4);
+    border-bottom: 1px solid transparent;
+    margin: 0 auto;
+    width: 100%;
+  }
+  header{
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1140px;
+      margin: 0 auto;
+      ul{
+        display: flex;
+        flex-direction: row;
+        margin: auto 0;
+        padding: 19px 0 18px;
+        li{
+          list-style: none;
+          margin: 0 15px;
+          
+        }
+      }
+      .navbar-menu{
+        .logo-htc{
+          max-width: 55px;
+          padding-right: 20px;
+        }
+      }
+      .navbar-tool{
+        .logo-vive{
+          max-width: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.hero{
+  .slick-slide{
+    img{
+        width: 100%;
+        min-height: 683px;
+        margin: 0 auto;
+        padding: 0;
+        object-fit: cover;
+    }
+  }
+  .slick-dots{
+    bottom:18px;
+    li button:before{
+        color:white;
+    }
+  }
+}
+
+
+.grid{
+  margin: 50px auto 100px auto;
+  max-width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .item-box{
+      text-align: center;
+      p,h2{
+          white-space: nowrap;
+      }
+      h2{
+          color: #4a4a4a;
+          line-height: 1.5;
+          padding: 10px 0;
+          font-weight: 100px;
+      }
+      p{
+          font-size: 12px;
+          padding: 0 0 20px 0;
+      }
+      img{
+          width: 100%;
+          height: auto;
+      }
+  }
+}
+.big-banner{
+  padding-top: 20px;
+  img{
+      min-height: 683px;
+      object-fit: cover; 
+      width: 100%;
+  }
+  .vive-focus-3{
+      position: relative;
+      .play-button{
+          position:absolute;
+          top:45%;
+          left: 43%;
+          display: flex;
+          flex-direction: row;
+          padding: 9px 30px;
+          border-radius: 30px;
+          color: #fff;
+          background-color: transparent;
+          border: 1px solid transparent;
+          border-color: #fff;
+      }
+  }
+
+}
+
+.email-subscription{
+  width: 100%;
+  margin: 80px auto;
+  text-align: center;
+  h4{
+      font-weight: 100;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #4a4a4a;
+  }
+ 
+  .search_input{
+      margin: 20px 0;
+      padding: 10px 5px;
+      border: none;
+      border-bottom: 1px solid #efefef;
+      border-radius: 0;
+      min-width: 400px;
+      color: #9b9b9b;
+  }
+  .form-check{
+      color: #9b9b9b;
+      label{
+          padding-left: 10px;   
+      }
+  }
+  .policy-term{
+      color: #4a4a4a;
+      margin: 20px 0;
+      a{
+          padding: 0 10px;
+      }
+  }
+  button{
+      background-color: #d2d2d2;
+      padding: 9px 30px;
+      border-radius: 30px;
+      border-color: #d2d2d2;
+      color: white;
+  }
+}
+
+footer{
+  background-color: #f4f4f4;
+  color: #4a4a4a;
+  padding: 50px 0;
+  position: relative;
+  .grid{
+      
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      
+      .item-box{
+          display: flex;
+          
+          flex-flow: column wrap;
+          text-align: left;
+          .globe{
+              margin: auto 0;
+          } 
+          label{
+              color: #4a4a4a;
+              float:left;
+              margin-bottom: 5px;
+              }
+          ul{
+              
+              li{
+                  list-style: none;
+                  margin: 10px 0;
+                  a{
+                      white-space: nowrap;
+                      color:#9b9b9b;
+                  }
+              } 
+          }
+          
+      }
+  }
+  .copyright-block{
+      position: absolute;
+      bottom: 30px;
+      right: 100px;
+      display: flex;
+      flex-direction: row;
+      p,a{
+          padding: 0 10px;
+      }
+      p{
+          color:#9b9b9b;
+      }
+  }
+}

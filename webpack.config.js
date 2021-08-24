@@ -5,9 +5,9 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
     devtool: false,
+    mode: 'development',
     entry: [
         './src/index.js',
-        './src/nav.js',
         './src/css-src/index.scss',
       ],
     output:{
