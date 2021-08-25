@@ -1,3 +1,4 @@
+
 nav{
   color:white;
   width: 100%;
@@ -5,14 +6,22 @@ nav{
   top: 0px;
   left: 0px;
   z-index: 10;
+  &.active-nav{
+    background-color: black;
+  }
+  &.test{
+    background-color: blue;
+  }
   :not(a,li,ul,img,i, .container) 
   {
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(78, 54, 54, 0.4);
     border-bottom: 1px solid transparent;
     margin: 0 auto;
     width: 100%;
   }
+  
   header{
+    
     .container{
       display: flex;
       flex-direction: row;
@@ -24,6 +33,7 @@ nav{
         flex-direction: row;
         margin: auto 0;
         padding: 19px 0 18px;
+        
         li{
           list-style: none;
           margin: 0 15px;
@@ -46,9 +56,7 @@ nav{
     }
   }
 }
-.active{
-  list-style: square;
-}
+
 .hero{
   .slick-slide{
     img{

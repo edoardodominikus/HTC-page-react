@@ -18,16 +18,16 @@ import {
 
 class App extends React.Component {
     render(){
-    const activeClass = (route) => { return location.pathname === route ? "active" : null }
+    const activeClass = (route) => { return location.pathname === route ? "active-nav" : "test" }
     return (
         <Router>
-            <nav className="header">
-                <header>
+            <nav className={activeClass("support")}>
+                <header >
                     <div className="container">
                         <ul className="navbar-menu">
-                            <li className={activeClass("/")}><Link to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></Link></li>
-                            <li className={activeClass("/products")}><Link to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</Link></li>
-                            <li className={activeClass("/support")}><Link to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</Link></li>
+                            <li><Link to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></Link></li>
+                            <li><Link to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</Link></li>
+                            <li><Link to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</Link></li>
                         </ul>
                         <ul className="navbar-tool">
                             <li><i className="icon-search" /></li>
@@ -176,6 +176,14 @@ export function Main() {
       </div>
   )
   
+}
+
+export function Products(){
+    return(
+        <div>
+            <h1>THIS IS PRODUCTS PAGE</h1>
+        </div>
+    )
 }
 
 export function Support(){
