@@ -29,6 +29,7 @@ nav{
           margin: 0 15px;
           
         }
+        
       }
       .navbar-menu{
         .logo-htc{
@@ -45,7 +46,9 @@ nav{
     }
   }
 }
-
+.active{
+  list-style: square;
+}
 .hero{
   .slick-slide{
     img{
@@ -94,17 +97,23 @@ nav{
 }
 .big-banner{
   padding-top: 20px;
+  width: 100%;
   img{
       min-height: 683px;
       object-fit: cover; 
       width: 100%;
   }
   .vive-focus-3{
-      position: relative;
+      .parent-button{
+        position: relative;
+        height: inherit;
+        width: inherit;
+      }
       .play-button{
           position:absolute;
-          top:45%;
-          left: 43%;
+          top:50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           display: flex;
           flex-direction: row;
           padding: 9px 30px;

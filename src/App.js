@@ -9,20 +9,25 @@ import {
     Switch,
     Route,
     Link,
+    NavLink,
     useParams,
     useRouteMatch
   } from "react-router-dom";
+// import { render } from 'sass';
 
-export function App() {
+
+class App extends React.Component {
+    render(){
+    const activeClass = (route) => { return location.pathname === route ? "active" : null }
     return (
         <Router>
             <nav className="header">
                 <header>
                     <div className="container">
                         <ul className="navbar-menu">
-                            <li><Link to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></Link></li>
-                            <li><Link to="/products" style={{ textDecoration: 'none',color:'white' }}>PRODUCTS</Link></li>
-                            <li><Link to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</Link></li>
+                            <li className={activeClass("/")}><Link to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></Link></li>
+                            <li className={activeClass("/products")}><Link to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</Link></li>
+                            <li className={activeClass("/support")}><Link to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</Link></li>
                         </ul>
                         <ul className="navbar-tool">
                             <li><i className="icon-search" /></li>
@@ -82,9 +87,12 @@ export function App() {
          </div>
      </footer>
         </Router>
-       
       )
+    }
 }
+
+export default App;
+
 
 export function Main() {
     var settings = {
@@ -138,13 +146,15 @@ export function Main() {
             </div>
             <div className = "big-banner">
             <div className="htc-u12">
-                <img src={require('../dist/img/big_banner/u12_inner_banner.jpg')}/>
+                <img src={require('../dist/img/big_banner/u12_inner_banner.jpg') }/>
             </div>
             <div className="vive-focus-3">
-                <img src={require('../dist/img/big_banner/desktop.png')} />
-                <div className="play-button">
+                <div className="parent-button">
+                    <img src={require('../dist/img/big_banner/desktop.png')} />
+                    <div className="play-button">
                     <i className="icon-youtube-play"></i>
                     <p>Watch Video</p>
+                    </div>
                 </div>
             </div>
         </div>

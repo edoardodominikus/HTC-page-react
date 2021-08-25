@@ -19,6 +19,17 @@ module.exports = {
         contentBase: './dist',
         port: 9999,
       },
+    performance:{
+        hints:"warning",
+        hints:"error",
+        hints:false,
+        maxAssetSize: 200000,
+        maxEntrypointSize: 400000,
+        assetFilter: function(assetFilename){
+            return assetFilename.endsWith('.css') || assetFilename.endsWith('js');
+        }
+    
+    },
     module:{
         rules:[
             {
@@ -38,7 +49,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                type: 'asset/inline'
+                type: 'asset/resource'
             },
             // {
             //     test: /\.html/,
