@@ -12,6 +12,9 @@ nav{
   &.test{
     background-color: blue;
   }
+  &.nav-support{
+    background-color: #f00;
+  }
   :not(a,li,ul,img,i, .container) 
   {
     background-color: rgba(78, 54, 54, 0.4);

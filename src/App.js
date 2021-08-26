@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component } from 'react';
 import "./css-src/App.scss";
 import "./css-src/fontello/css/fontello.css";
 import Slider from "react-slick";
@@ -6,28 +6,27 @@ import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
 import {
     BrowserRouter as Router,
+    HashRouter,
     Switch,
     Route,
     Link,
     NavLink,
     useParams,
-    useRouteMatch
+    useRouteMatch,
+    useLocation
   } from "react-router-dom";
 // import { render } from 'sass';
 
-
-class App extends React.Component {
-    render(){
-    const activeClass = (route) => { return location.pathname === route ? "active-nav" : "test" }
+const App = (props) => {
     return (
-        <Router>
-            <nav className={activeClass("support")}>
-                <header >
+        <HashRouter>
+            <NavDiv>
+                <header>
                     <div className="container">
                         <ul className="navbar-menu">
-                            <li><Link to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></Link></li>
-                            <li><Link to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</Link></li>
-                            <li><Link to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</Link></li>
+                            <li><NavLink to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></NavLink></li>
+                            <li><NavLink to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</NavLink></li>
+                            <li><NavLink to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</NavLink></li>
                         </ul>
                         <ul className="navbar-tool">
                             <li><i className="icon-search" /></li>
@@ -37,10 +36,10 @@ class App extends React.Component {
                         </ul>
                 </div>
                 </header>
-            </nav>
+            </NavDiv>
             <Switch>
-                <Route exact path="/"><Main /></Route>
-                <Route exact path="/support"><Support /></Route>
+                <Route exact path="/" component={Main}></Route>
+                <Route exact path="/support" component={Support}></Route>
             </Switch>
             <footer>
          <div className="grid">
@@ -86,9 +85,15 @@ class App extends React.Component {
               </div>
          </div>
      </footer>
-        </Router>
+        </HashRouter>
       )
-    }
+}
+const NavDiv = (props) => {
+
+    const location = useLocation().pathname.replace('/','');
+    return (
+        <nav className={`nav-${location}`}>{props.children}</nav>
+    )
 }
 
 export default App;
@@ -186,7 +191,7 @@ export function Products(){
     )
 }
 
-export function Support(){
+export const Support = () => {
     return(
         <div>
             <h1>THIS IS SUPPORT PAGE</h1>
