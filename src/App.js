@@ -25,20 +25,21 @@ const App = (props) => {
                     <div className="container">
                         <ul className="navbar-menu">
                             <li><NavLink to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></NavLink></li>
-                            <li><NavLink to="/products" style={{ textDecoration: 'none',color:'white',fontSize:'12' }}>PRODUCTS</NavLink></li>
-                            <li><NavLink to="/support" style={{ textDecoration: 'none',color:'white'  }}>SUPPORT</NavLink></li>
+                            <li><NavLink to="/products" style={{ textDecoration: 'none'}}>PRODUCTS</NavLink></li>
+                            <li><NavLink to="/support" style={{ textDecoration: 'none' }}>SUPPORT</NavLink></li>
                         </ul>
                         <ul className="navbar-tool">
                             <li><i className="icon-search" /></li>
                             <li><a><i className="icon-shop" /></a></li>
                             <li><a><i className="icon-adult" /></a></li>
-                            <li><a><img src={require('../dist/img/navbar/vive.png')} className="logo-vive"></img></a></li>
+                            <li><a><i className="icon-vive-logo"/></a></li>
                         </ul>
                 </div>
                 </header>
             </NavDiv>
             <Switch>
                 <Route exact path="/" component={Main}></Route>
+                <Route exact path="/products" component={Products}></Route>
                 <Route exact path="/support" component={Support}></Route>
             </Switch>
             <footer>
@@ -111,7 +112,7 @@ export function Main() {
         autoplaySpeed: 2000,
       };
   return(
-    <div>
+    <main>
         <div className="hero">
             <Slider {...settings}>
                 <div>
@@ -178,7 +179,7 @@ export function Main() {
             </div>
             <button>Sign Up</button>
         </div>
-      </div>
+      </main>
   )
   
 }
@@ -193,8 +194,90 @@ export function Products(){
 
 export const Support = () => {
     return(
-        <div>
-            <h1>THIS IS SUPPORT PAGE</h1>
+        <div className="support">
+            <div class="section-wrapper">
+                <section className="paralax-wrap">
+                    <div className = "paralax-img"></div>
+                </section>   
+                <section className="search-banner">
+                    <div className="content">
+                        <div className="title-section">
+                            <div className="caption">
+                                <span>
+                                    As HTC strives to offer customers new innovations for our Smartphones, we also continually evaluate existing apps and services based on various business and customer needs. In order to continue our focus on innovation, it is necessary from time to time to discontinue some services. As a result, starting Aug. 18, 2021, HTC Account prior to version 7.0 will no longer be supported. For later versions, please update to the latest version if you encountered problems on log-in. For customers who require additional assistance, we ask you please contact your local HTC Customer Care. We look forward to bringing our customers new innovations in the future.
+                                </span>
+                            </div>
+                            <h2>
+                                    Hello. 
+                                    <br/>
+                                    What can we help with?
+                                </h2>
+                        </div>
+                    </div>
+                    <div className="search-area">
+                        <div className="search-container">
+                            <input type="text" placeholder="Type what you're looking for" class="input-query"/>
+                            <div className="button-submit">
+                                <img src={require('../dist/img/search-icon.svg')}></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="product-listing">
+                        <div className="border-box">
+                            <h2>Which product do you need help with?</h2>
+                        </div>
+                        <div className="products-flex">
+                            <div className="item-box">
+                                <img src={require('../dist/img/product/5g-icon.svg')}></img>
+                                <span>5G</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/product/u-icon.svg')}></img>
+                                <span>U</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/product/one-icon.svg')}></img>
+                                <span>One</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/product/desire-icon.svg')}></img>
+                                <span>Desire</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/product/accessories-icon.svg')}></img>
+                                <span>Accessories</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="topic-choose">
+                        <div className="border-box">
+                            <h2>What topic do you need help with?</h2>
+                        </div>
+                        <div className="products-flex">
+                            <div className="item-box">
+                                <img src={require('../dist/img/topic/back-up-n-transfer-icon.svg')}></img>
+                                <span>Backup and Transfer</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/topic/applications-icon.svg')}></img>
+                                <span>Applications</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/topic/h-t-c-sync-manager.svg')}></img>
+                                <span>HTC Sync Manager</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/topic/online-shopping-online-shopping-help-copy-2.svg')}></img>
+                                <span>Online Shopping Help</span>
+                            </div>
+                            <div className="item-box">
+                                <img src={require('../dist/img/topic/online-shopping-issue.svg')}></img>
+                                <span>Repair Status</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     )
 }
