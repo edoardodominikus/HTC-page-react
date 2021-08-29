@@ -347,11 +347,12 @@ main{
           .item-box{
             display: flex;
             flex-direction: column;
+            width: 175px;
             padding: 0 20px;
              img{
               width: 100px;
               height: 100px;
-              margin-bottom: 20px;
+              margin: 0 auto 30px;
             }
             span{
               font-size: 17px;
@@ -369,7 +370,10 @@ main{
           height: 70px;
         }
         span{
-          white-space: pre;
+          white-space: normal;
+          word-break: break-word;
+          height: 50px;
+          width: 100%;
         }
       }
       
@@ -381,15 +385,16 @@ footer{
   background-color: #f4f4f4;
   color: #4a4a4a;
   padding: 50px 0;
-  position: relative;
   width: 100%;
   .grid{
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
       margin: 50px auto 100px auto;
-      max-width: 75%;
+      min-width: 992px;
+      max-width: 1320px;
       flex-direction: row;
       justify-content: center;
+      position: relative;
       .item-box{
           display: flex;
           
@@ -419,8 +424,8 @@ footer{
   }
   .copyright-block{
       position: absolute;
-      bottom: 30px;
-      right: 100px;
+      bottom: -48px;
+      right: 3px;
       display: flex;
       flex-direction: row;
       p,a{
