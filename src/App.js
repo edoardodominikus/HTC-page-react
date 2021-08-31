@@ -25,8 +25,36 @@ const App = (props) => {
                     <div className="container">
                         <ul className="navbar-menu">
                             <li><NavLink to="/" style={{ textDecoration: 'none' }}><img src={require('../dist/img/navbar/logo.png')} class="logo-htc"/></NavLink></li>
-                            <li><NavLink to="/products" style={{ textDecoration: 'none'}}>PRODUCTS</NavLink></li>
-                            <li><NavLink to="/support" style={{ textDecoration: 'none' }}>SUPPORT</NavLink></li>
+                            <li className="products-li">
+                                <NavLink to="/products" style={{ textDecoration: 'none'}}>PRODUCTS</NavLink>
+                                <div className="bottom-line"></div>
+                                <div className="submenu"> 
+                                    <div className="sub-item-box">
+                                        <img src={require('../dist/img/navbar/submenu/5g.svg')}></img>
+                                        <h4>5G</h4>
+                                    </div>
+                                    <div className="sub-item-box">
+                                        <img src={require('../dist/img/navbar/submenu/phone.svg')}></img>
+                                        <h4>SMARTPHONES</h4>
+                                    </div>
+                                    <div className="sub-item-box">
+                                        <img src={require('../dist/img/navbar/submenu/accessories.svg')}></img>
+                                        <h4>ACCESSORIES</h4>
+                                    </div>
+                                    <div className="sub-item-box">
+                                        <img src={require('../dist/img/navbar/submenu/exodus.svg')}></img>
+                                        <h4>EXODUS</h4>
+                                    </div>
+                                    <div className="sub-item-box">
+                                        <img src={require('../dist/img/navbar/submenu/vive.svg')}></img>
+                                        <h4>VIVE</h4>
+                                    </div>
+                                </div>
+                                </li>
+                            <li className="support-li">
+                                <NavLink to="/support" style={{ textDecoration: 'none' }}>SUPPORT</NavLink>
+                                <div className="bottom-line"></div>
+                            </li>
                         </ul>
                         <ul className="navbar-tool">
                             <li><i className="icon-search" /></li>
@@ -186,8 +214,21 @@ export function Main() {
 
 export function Products(){
     return(
-        <div>
-            <h1>THIS IS PRODUCTS PAGE</h1>
+        <div className="product-category">
+            <div className="title">
+                <h3>SMARTPHONE</h3>
+                <a className="button-border">Comparison</a>
+            </div>
+            <div className="filter-sort">
+                <div className="tag-list">
+                    <a className="button-border">Comparison</a>
+                    <a className="button-border">Comparison</a>
+                </div>
+                <div className="sort-dropdown">
+                    <a className="button-border">Comparison</a>
+                </div>
+            </div>
+
         </div>
     )
 }
