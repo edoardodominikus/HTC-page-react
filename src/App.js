@@ -93,12 +93,6 @@ const App = (props) => {
               </div>
               <div className="item-box">
                   <label>Support</label>
-                  <ul>
-                      <li><a>Support Center</a></li>
-                      <li><a>Warranty Policy</a></li>
-                  </ul>
-              </div>
-              <div className="item-box">
                   <label>About HTC</label>
                   <ul>
                       <li><a>Company Overview</a></li>
@@ -221,14 +215,91 @@ export function Products(){
             </div>
             <div className="filter-sort">
                 <div className="tag-list">
-                    <a className="button-border">Comparison</a>
-                    <a className="button-border">Comparison</a>
+                    <a className="button-border">All Products</a>
+                    <a className="button-border">HTC Desire Series</a>
                 </div>
                 <div className="sort-dropdown">
-                    <a className="button-border">Comparison</a>
+                    <span className="sort-according">Sort According</span>
+                    <select name="sort-by" id="sort-by">
+                        <option value="latest">Latest</option>
+                        <option value="price-ascending">Price Ascending</option>
+                        <option value="price-descending">Price Descending</option>
+                    </select>
                 </div>
             </div>
-
+            <div className="item-grid">
+                <div className="item-block">
+                    <img src={require('../dist/img/product/flash_green.png')}></img>
+                    <h4 className="item-title">HTC U20 5G</h4>
+                    <div className="price-block">
+                        <div className="base-price">TWD$18,990</div>
+                        <div className="sale-price">TWD$13,990起</div>
+                    </div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/sirocco_orange_03.png')}></img>
+                    <h4 className="item-title">HTC Desire 20+</h4>
+                    <div className="price-block">
+                        <div className="sale-price">TWD$8,490起</div>
+                    </div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/thunder_300x300.png')}></img>
+                    <h4 className="item-title">HTC Desire 21 pro 5G</h4>
+                    <div className="price-block">
+                        <div className="base-price">TWD$12,990</div>
+                        <div className="sale-price">TWD$10,990起</div>
+                    </div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/bayamo_black.png')}></img>
+                    <h4 className="item-title">HTC Desire 20 pro</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/htc-u12-life-purple-2v-listing.png')}></img>
+                    <h4 className="item-title">HTC Desire 19s</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/br2_listing_blue.png')}></img>
+                    <h4 className="item-title">HTC Desire 19+</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/htc-u19e-purple-2v-listing.png')}></img>
+                    <h4 className="item-title">HTC U19e</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/mayday-black-c.png')}></img>
+                    <h4 className="item-title">HTC U12+ 五月天限定版</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+                <div className="item-block">
+                    <img src={require('../dist/img/product/breeze2-black-c.png')}></img>
+                    <h4 className="item-title">HTC Desire 12s</h4>
+                    <div className="price-block"></div>
+                    <a className="button-border">Get Details</a>
+                    <a className="button-border-green">Buy Now</a>
+                </div>
+            </div>
         </div>
     )
 }
