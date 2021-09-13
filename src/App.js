@@ -130,29 +130,40 @@ export function Main() {
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed: 2000,
       };
   return(
     <main>
         <div className="hero">
             <Slider {...settings}>
-                <div>
-                    <img src={require('../dist/img/hero/1/htc-desire.jpg')}/>
+                <div className="outer-box">
+                    <img className="first-hero" src={require('../dist/img/hero/1/htc-desire.png')}/>
+                    <img className="text-title first-title" src={require('../dist/img/hero/1/htc-desire-21-pro-5-g-logo-wh.svg')}/>
+                    <h3 class="text-caption first-text">The iconic Desire - now with 5G</h3>
+                    <h3 class="text-caption first-text-2">Available for purchase in selected countries.</h3>
                 </div>
-                <div>
-                    <img src={require('../dist/img/hero/2/2in1.jpg')}/>
+                <div className="outer-box">
+                    <img className="second-hero" src={require('../dist/img/hero/2/2in1.jpg')}/>
+                    <img className="text-title second-title" src={require('../dist/img/hero/3/vive-pro-2-logo-m.svg')}/>
                 </div>
-                <div>
-                    <img src={require('../dist/img/hero/3/vivepro2-d.png')}/>
+                <div className="outer-box">
+                    <img className="third-hero" src={require('../dist/img/hero/3/vivepro2-d.png')}/>
+                    <img className="text-title third-title" src={require('../dist/img/hero/3/vive-pro-2-logo-m.svg')}/>
+                    <h3 class="text-caption third-text">Sharp. Precise. Immersive.</h3>
+                    <a className="button-border third-button">GET DETAILS</a></div>
+                <div className="outer-box">
+                    <img className="forth-hero" src={require('../dist/img/hero/4/desktop2.jpg')}/>
+                    <img className="text-title forth-title" src={require('../dist/img/hero/3/vive-pro-2-logo-m.svg')}/>
                 </div>
-                    <img src={require('../dist/img/hero/4/desktop2.jpg')}/>
-                <div>
-                    <img src={require('../dist/img/hero/5/tws1-homebanner-d-white.jpg')}/>
+                <div className="outer-box">
+                    <img className="fifth-hero" src={require('../dist/img/hero/5/tws1-homebanner-d-white.jpg')}/>
+                    <img className="text-title fifth-title" src={require('../dist/img/hero/3/vive-pro-2-logo-m.svg')}/>
                 </div>
-                <div>
-                    <img src={require('../dist/img/hero/6/desktop4.jpg')}/>
-            </div>
+                <div className="outer-box">
+                    <img className="sixth-hero" src={require('../dist/img/hero/6/desktop4.jpg')}/>
+                    <img className="text-title sixth-title" src={require('../dist/img/hero/3/vive-pro-2-logo-m.svg')}/>
+                </div>
             </Slider>
         </div>
             <div className="grid">
